@@ -1,17 +1,19 @@
 <?php
 /*
   Haciendo uso de una función anónima y el operador ternario, calculo la serie de fibonacci de un número dado.
-* La fórmula de la serie de fibonacci es la siguiente:
-* F(n) = F(n-1) + F(n-2)
-* @param int $n
-* @return int
-* @example $fibonacci(5) => 5
-* @example $fibonacci(10) => 55
-* @example $fibonacci(20) => 6765
+  * La fórmula de la serie de fibonacci es la siguiente:
+  * F(n) = F(n-1) + F(n-2)
+  * @param int $n
+  * @return int
+  * @example $fibonacci(5) => 5
+  * @example $fibonacci(10) => 55
+  * @example $fibonacci(20) => 6765
 */
 
 // Inicializo la variable $generarFibonacci como nula.
 $generarFibonacci = null;
+// Defino el número a calcular.
+$n = 5;
 
 /*
   Asigno a la variable $generarFibonacci una función anónima que recibe un parámetro $n.
@@ -31,7 +33,11 @@ $generarFibonacci = function($n) use (&$generarFibonacci){
   Muestro los resultados y con PHP_EOL hacemos un salto de línea.
   PHP_EOL es una constante predefinida en PHP, para el salto de línea en diferentes sistemas operativos.
 */
-echo $generarFibonacci(5) . PHP_EOL;
-echo $generarFibonacci(10) . PHP_EOL;
-echo $generarFibonacci(20) . PHP_EOL;
+echo "La serie de fibonacci para $n es " . $generarFibonacci(5) . PHP_EOL;
+
+$n = 10;
+echo "La serie de fibonacci para $n es " . $generarFibonacci(10) . PHP_EOL;
+
+$n = 20;
+echo "La serie de fibonacci para $n es " . $generarFibonacci(20) . PHP_EOL;
 ?>
