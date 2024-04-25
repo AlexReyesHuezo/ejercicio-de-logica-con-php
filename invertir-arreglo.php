@@ -1,6 +1,6 @@
 <?php
-/*
-  Invertir un arreglo usando la función array_reverse y sin usarla.
+/**
+  * Invertir un arreglo usando la función array_reverse y sin usarla.
   * @param array $arreglo
   * @return array
   * @example $invertirArreglo([1, 2, 3, 4, 5]) => [5, 4, 3, 2, 1]

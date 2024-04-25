@@ -1,6 +1,6 @@
 <?php
-/*
-  Comprobar si una palabra, frase o número es un palíndromo.
+/**
+  * Comprobar si una palabra, frase o número es un palíndromo.
   * Un palíndromo es una palabra, frase o número que se lee igual en un sentido que en otro.
   * @param string $palabra
   * @return string

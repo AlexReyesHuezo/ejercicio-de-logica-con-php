@@ -1,6 +1,6 @@
 <?php
-/*
-  Haciendo uso de una función anónima y el operador ternario, calculo la serie de fibonacci de un número dado.
+/**
+  * Haciendo uso de una función anónima y el operador ternario, calculo la serie de fibonacci de un número dado.
   * La fórmula de la serie de fibonacci es la siguiente:
   * F(n) = F(n-1) + F(n-2)
   * @param int $n
