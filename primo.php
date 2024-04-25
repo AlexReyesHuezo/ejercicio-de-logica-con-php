@@ -1,6 +1,6 @@
 <?php
-/*
-  Usando una función, calculo si un número es primo o no.
+/**
+  * Usando una función, calculo si un número es primo o no.
   * La fórmula para saber si un número es primo es la siguiente:
   * Un número primo es aquel que solo es divisible por 1 y por sí mismo: n % 1 == 0 && n % n == 0
   * @param int $n
