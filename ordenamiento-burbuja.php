@@ -11,8 +11,11 @@ function ordenarBurbuja($numeros){
     for($i = 0; $i < count($numeros); $i++){
         // Recorro el array de números con una posición menos para no salirme del array.
         for($j = 0; $j < count($numeros) - 1; $j++){
-            // Compruebo si el número actual es mayor que el siguiente.
-            if($numeros[$j] > $numeros[$j + 1]){
+            /*
+              Compruebo si el número actual es mayor que el siguiente.
+              Cuando dos números son iguales o el número actual es mayor que el siguiente, no se intercambian.
+            */
+            if($numeros[$j] < $numeros[$j + 1]){
                 // Guardo el número actual en una variable auxiliar.
                 $aux = $numeros[$j];
                 // Intercambio los números.
@@ -25,7 +28,7 @@ function ordenarBurbuja($numeros){
     return $numeros;
 }
 
-$numeros = [5, 3, 8, 8, 8, 5, 5, 1, 7];
+$numeros = [5, 3, 8, 8, 5, 5, 1, 7];
 // Uso la función implode para convertir el array en una cadena de texto y poder imprimirlo en un mejor formato.
 echo "Lista original: " . implode(", ", $numeros) . PHP_EOL;
 echo "Lista ordenada: " . implode(", ", ordenarBurbuja($numeros)) . PHP_EOL;
