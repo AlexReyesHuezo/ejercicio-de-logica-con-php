@@ -8,44 +8,44 @@
 
 // Función recursiva para ordenar un array de palabras con el método de la fusión.
 function ordenarFusion($palabras){
-    // Si el array tiene un solo elemento, lo devuelvo tal cual.
-    if(count($palabras) <= 1){
-        return $palabras;
-    }
-    // Obtingo el punto medio del array.
-    $mitad = count($palabras) / 2;
-    // Divido el array en dos partes.
-    $izquierda = array_slice($palabras, 0, $mitad);
-    $derecha = array_slice($palabras, $mitad);
-    // Ordeno las dos partes recursivamente.
-    $izquierda = ordenarFusion($izquierda);
-    $derecha = ordenarFusion($derecha);
-    // Fusionan las dos partes ordenadas.
-    return fusion($izquierda, $derecha);
+  // Si el array tiene un solo elemento, lo devuelvo tal cual.
+  if(count($palabras) <= 1){
+    return $palabras;
+  }
+  // Obtingo el punto medio del array.
+  $mitad = count($palabras) / 2;
+  // Divido el array en dos partes.
+  $izquierda = array_slice($palabras, 0, $mitad);
+  $derecha = array_slice($palabras, $mitad);
+  // Ordeno las dos partes recursivamente.
+  $izquierda = ordenarFusion($izquierda);
+  $derecha = ordenarFusion($derecha);
+  // Fusionan las dos partes ordenadas.
+  return fusion($izquierda, $derecha);
 }
 
 // Función para fusionar dos arrays ordenados (el verdadero motor).
 function fusion($izquierda, $derecha){
-    $resultado = [];
-    // Mientras haya elementos en los dos arrays.
-    while(count($izquierda) > 0 && count($derecha) > 0){
-        // Comparo el primer elemento de cada array.
-        if($izquierda[0] < $derecha[0]){
-            // Agrego el elemento menor al array resultado.
-            $resultado[] = array_shift($izquierda);
-        }else{
-            // Agrego el elemento menor al array resultado.
-            $resultado[] = array_shift($derecha);
-        }
+  $resultado = [];
+  // Mientras haya elementos en los dos arrays.
+  while(count($izquierda) > 0 && count($derecha) > 0){
+    // Comparo el primer elemento de cada array.
+    if($izquierda[0] < $derecha[0]){
+      // Agrego el elemento menor al array resultado.
+      $resultado[] = array_shift($izquierda);
+    }else{
+      // Agrego el elemento menor al array resultado.
+      $resultado[] = array_shift($derecha);
     }
-    // Agrego los elementos restantes de los dos arrays.
-    while(count($izquierda) > 0){
-        $resultado[] = array_shift($izquierda);
-    }
-    while(count($derecha) > 0){
-        $resultado[] = array_shift($derecha);
-    }
-    return $resultado;
+  }
+  // Agrego los elementos restantes de los dos arrays.
+  while(count($izquierda) > 0){
+    $resultado[] = array_shift($izquierda);
+  }
+  while(count($derecha) > 0){
+    $resultado[] = array_shift($derecha);
+  }
+  return $resultado;
 }
 
 $departamentos = ["Ahuachapan", "Santa Ana", "Sonsonate", "La Libertad", "Chalatenango", "San Salvador", "La Paz", "Cuscatlan", "San Vicente", "La Union", "Morazan", "Cabañas", "San Miguel", "Usulutan", "La Union"];

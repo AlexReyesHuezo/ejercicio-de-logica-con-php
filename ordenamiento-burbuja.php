@@ -8,24 +8,24 @@
  */
 
 function ordenarBurbuja($numeros){
-    for($i = 0; $i < count($numeros); $i++){
-        // Recorro el array de números con una posición menos para no salirme del array.
-        for($j = 0; $j < count($numeros) - 1; $j++){
-            /*
-              Compruebo si el número actual es mayor que el siguiente.
-              Cuando dos números son iguales o el número actual es mayor que el siguiente, no se intercambian.
-            */
-            if($numeros[$j] < $numeros[$j + 1]){
-                // Guardo el número actual en una variable auxiliar.
-                $aux = $numeros[$j];
-                // Intercambio los números.
-                $numeros[$j] = $numeros[$j + 1];
-                $numeros[$j + 1] = $aux;
-            }
-        }
+  for($i = 0; $i < count($numeros); $i++){
+    // Recorro el array de números con una posición menos para no salirme del array.
+    for($j = 0; $j < count($numeros) - 1; $j++){
+      /*
+        Compruebo si el número actual es mayor que el siguiente.
+        Cuando dos números son iguales o el número actual es mayor que el siguiente, no se intercambian.
+      */
+      if($numeros[$j] < $numeros[$j + 1]){
+        // Guardo el número actual en una variable auxiliar.
+        $aux = $numeros[$j];
+        // Intercambio los números.
+        $numeros[$j] = $numeros[$j + 1];
+        $numeros[$j + 1] = $aux;
+      }
     }
-    // Devuelvo el array de números ordenado, se devuenve aquí ya que se han finalizado los intercambios y el array está ordenado.
-    return $numeros;
+  }
+  // Devuelvo el array de números ordenado, se devuenve aquí ya que se han finalizado los intercambios y el array está ordenado.
+  return $numeros;
 }
 
 $numeros = [5, 3, 8, 8, 5, 5, 1, 7];
